@@ -1,0 +1,135 @@
+{
+  "carta": [
+    {
+      "categoria": "Entrantes",
+      "items": [
+        { "nombre": "Gambas al ajillo", "precio": "16,00€" },
+        { "nombre": "Piadina con paté", "precio": "11,50€" },
+        { "nombre": "Setas salteadas", "precio": "14,00€" },
+        { "nombre": "Croquetas", "precio": "2,00€ / unidad" },
+        { "nombre": "Tartar de salmón", "precio": "18,00€" },
+        { "nombre": "Fondue de provolone", "precio": "14,50€" }
+      ]
+    },
+    {
+      "categoria": "Sopas y cremas",
+      "items": [
+        { "nombre": "Sopa de cebolla", "precio": "8,00€" },
+        { "nombre": "Sopa de ajo", "precio": "8,00€" },
+        { "nombre": "Sopa de pollo", "precio": "9,00€" },
+        { "nombre": "Crema de verduras", "precio": "9,00€" }
+      ]
+    },
+    {
+      "categoria": "Ensaladas",
+      "items": [
+        { "nombre": "Arolena", "precio": "17,00€" },
+        { "nombre": "Burrata", "precio": "16,50€" },
+        { "nombre": "Capresse", "precio": "15,50€" },
+        { "nombre": "César", "precio": "16,00€" },
+        { "nombre": "Tudela", "precio": "15,00€" }
+      ]
+    },
+    {
+      "categoria": "Lasañas y risotos",
+      "items": [
+        { "nombre": "Lasaña a la Boloñesa", "precio": "16,00€" },
+        { "nombre": "Lasaña a la Ortellana", "precio": "16,00€" },
+        { "nombre": "Risotto Marineri", "precio": "16,50€" },
+        { "nombre": "Risotto Boscaiolo", "precio": "16,50€" }
+      ]
+    },
+    {
+      "categoria": "Pastas",
+      "items": [
+        { "nombre": "Arrabiata", "precio": "16,00€" },
+        { "nombre": "Boloñesa", "precio": "16,00€" },
+        { "nombre": "Carbonara", "precio": "15,50€" },
+        { "nombre": "Don Alfredo", "precio": "14,00€" },
+        { "nombre": "Fagotti", "precio": "16,50€" },
+        { "nombre": "Funghi e tritare", "precio": "16,50€" },
+        { "nombre": "Marinera", "precio": "17,50€" },
+        { "nombre": "Napoli", "precio": "12,50€" },
+        { "nombre": "Pesto", "precio": "15,00€" },
+        { "nombre": "Provenzale al forni", "precio": "17,00€" },
+        { "nombre": "Puttanesa", "precio": "15,50€" }
+      ]
+    },
+    {
+      "categoria": "Pizzas",
+      "items": [
+        { "nombre": "Margarita", "precio": "12,00€" },
+        { "nombre": "Arolena", "precio": "17,00€" },
+        { "nombre": "Barbacoa", "precio": "15,00€" },
+        { "nombre": "Calzone", "precio": "15,00€" },
+        { "nombre": "Carbonara", "precio": "15,00€" },
+        { "nombre": "Cuatro Estaciones", "precio": "15,00€" },
+        { "nombre": "Cuatro Quesos", "precio": "15,00€" },
+        { "nombre": "Especial", "precio": "16,50€" },
+        { "nombre": "Don Juan", "precio": "13,50€" },
+        { "nombre": "Fiorentina", "precio": "13,50€" },
+        { "nombre": "Fontana", "precio": "16,00€" },
+        { "nombre": "Gambaretti", "precio": "16,00€" },
+        { "nombre": "Hawai", "precio": "13,50€" },
+        { "nombre": "Indietro", "precio": "16,50€" },
+        { "nombre": "Marinera", "precio": "17,00€" },
+        { "nombre": "México", "precio": "14,50€" },
+        { "nombre": "Pomodoro", "precio": "14,50€" },
+        { "nombre": "Proscciuto", "precio": "13,00€" },
+        { "nombre": "Proscciuto e Funqui", "precio": "13,50€" },
+        { "nombre": "Roberto", "precio": "14,50€" },
+        { "nombre": "Rubén", "precio": "13,50€" },
+        { "nombre": "Rúcula", "precio": "16,00€" },
+        { "nombre": "Serrana", "precio": "15,00€" },
+        { "nombre": "Tonno e Cipolla", "precio": "13,50€" },
+        { "nombre": "Tonetti", "precio": "13,00€" },
+        { "nombre": "Torpedo", "precio": "14,50€" },
+        { "nombre": "Vitorio", "precio": "15,00€" },
+        { "nombre": "Vegetariana", "precio": "16,00€" }
+      ]
+    },
+    {
+      "categoria": "Carnes",
+      "items": [
+        { "nombre": "Entrecot Txogitxu Selección Clandestino (500g)", "precio": "48,00€" },
+        { "nombre": "Entrecot Txogitxu Selección Extra (500g)", "precio": "38,00€" },
+        { "nombre": "Solomillo de ternera", "precio": "26,00€" },
+        { "nombre": "Medallones de solomillo de cerdo", "precio": "19,50€" },
+        { "nombre": "Brocheta de solomillo a la leña", "precio": "36,00€" },
+        { "nombre": "Hamburguesa Angus", "precio": "15,00€" },
+        { "nombre": "Pluma Ibérica", "precio": "26,00€" },
+        { "nombre": "Secreto Ibérico", "precio": "25,00€" },
+        { "nombre": "Pechuga de pollo", "precio": "17,00€" }
+      ]
+    },
+    {
+      "categoria": "Pescados",
+      "items": [
+        { "nombre": "Lomo de bacalao Arolena", "precio": "26,00€" },
+        { "nombre": "Suprema de merluza en salsa", "precio": "23,00€" },
+        { "nombre": "Calamar nacional", "precio": "28,00€" },
+        { "nombre": "Lomo de salmón al horno", "precio": "22,00€" },
+        { "nombre": "Pata de pulpo a la brasa", "precio": "30,00€" }
+      ]
+    },
+    {
+      "categoria": "Postres",
+      "items": [
+        { "nombre": "Tiramisú", "precio": "7,00€" },
+        { "nombre": "Tarta de la abuela", "precio": "7,00€" },
+        { "nombre": "Tarta de queso", "precio": "7,00€" },
+        { "nombre": "Mousse de chocolate", "precio": "5,50€" },
+        { "nombre": "Flan casero", "precio": "6,00€" },
+        { "nombre": "Coulant de chocolate con helado", "precio": "6,00€" },
+        { "nombre": "Creps de chocolate y nata", "precio": "6,00€" }
+      ]
+    },
+    {
+      "categoria": "Helados",
+      "items": [
+        { "nombre": "Helado italiano", "precio": "2,50€ / bola" },
+        { "nombre": "Sabores", "descripcion": "Pistacho, Stracciatella, Chocolate, Fresa, Mango, Limón" }
+      ]
+    }
+  ]
+}

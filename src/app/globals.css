@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-arolena-black text-arolena-cream antialiased;
+  }
+  ::selection {
+    background: theme('colors.arolena.gold');
+    color: theme('colors.arolena.black');
+  }
+}
