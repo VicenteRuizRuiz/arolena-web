@@ -21,6 +21,7 @@ export default function Gallery({ full = false }: GalleryProps) {
     <section id="galeria" className="bg-arolena-ink py-20 md:py-28">
       <div className="container">
         <div className="max-w-3xl mb-12">
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Galería
           </p>

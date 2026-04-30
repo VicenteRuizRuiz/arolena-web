@@ -22,6 +22,7 @@ export default function CuisineSection() {
     <section id="cocina" className="bg-arolena-black py-20 md:py-28">
       <div className="container">
         <div className="max-w-3xl">
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Nuestra cocina
           </p>
@@ -39,7 +40,7 @@ export default function CuisineSection() {
           {pillars.map((p) => (
             <article
               key={p.titulo}
-              className="rounded-2xl border border-arolena-line bg-arolena-ink p-8 hover:border-arolena-gold/60 transition-colors"
+              className="card-hover rounded-2xl border border-arolena-line bg-arolena-ink p-8"
             >
               <h3 className="font-display text-2xl text-arolena-cream">
                 {p.titulo}

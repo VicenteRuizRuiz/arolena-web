@@ -25,6 +25,7 @@ export default function ServicesSection() {
     <section id="servicios" className="bg-arolena-black py-20 md:py-28">
       <div className="container">
         <div className="max-w-3xl">
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Servicios
           </p>
@@ -41,7 +42,7 @@ export default function ServicesSection() {
           {servicios.map((s) => (
             <article
               key={s.titulo}
-              className="rounded-2xl border border-arolena-line bg-arolena-ink p-6"
+              className="card-hover rounded-2xl border border-arolena-line bg-arolena-ink p-6"
             >
               <h3 className="font-display text-xl text-arolena-cream">
                 {s.titulo}

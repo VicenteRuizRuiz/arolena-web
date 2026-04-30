@@ -18,6 +18,7 @@ export default function WoodOvenSection() {
         </div>
 
         <div>
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Nuestra firma
           </p>

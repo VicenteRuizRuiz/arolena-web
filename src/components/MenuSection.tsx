@@ -18,7 +18,8 @@ export default function MenuSection({ full = false }: MenuSectionProps) {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
+            <span aria-hidden="true" className="gold-rule" />
+          <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
               Carta
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-arolena-cream">

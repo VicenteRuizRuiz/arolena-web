@@ -18,6 +18,7 @@ export default function OccasionsSection() {
     <section id="ocasiones" className="bg-arolena-ink py-20 md:py-28">
       <div className="container grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Para cualquier ocasión
           </p>

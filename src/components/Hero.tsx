@@ -7,7 +7,8 @@ const HERO_IMAGE = '/images/restaurante/IMG_5232.jpeg';
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-arolena-black">
+    <section className="relative isolate overflow-hidden bg-arolena-black min-h-[92vh] flex items-center">
+      {/* Imagen de fondo */}
       <div className="absolute inset-0 -z-10">
         <Image
           src={HERO_IMAGE}
@@ -15,27 +16,37 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-40"
+          className="object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-arolena-black/70 via-arolena-black/60 to-arolena-black" />
+        {/* Gradiente radial que da atmósfera en lugar de un plano oscuro uniforme */}
+        <div className="absolute inset-0 bg-gradient-to-b from-arolena-black/80 via-arolena-black/50 to-arolena-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(200,168,118,0.07),transparent)]" />
       </div>
 
-      <div className="container py-24 md:py-36 lg:py-44 text-center">
-        <p className="text-arolena-gold tracking-[0.4em] text-xs md:text-sm uppercase mb-6">
+      {/* Línea decorativa vertical izquierda */}
+      <div
+        aria-hidden="true"
+        className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 w-px h-32 bg-gradient-to-b from-transparent via-arolena-gold/40 to-transparent hidden md:block animate-fade-in delay-700"
+      />
+
+      <div className="container py-24 md:py-36 text-center">
+        <p className="animate-fade-up delay-100 text-arolena-gold tracking-[0.5em] text-xs md:text-sm uppercase mb-8">
           {restaurantInfo.ciudad}
         </p>
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-arolena-cream tracking-wide">
+
+        <h1 className="animate-fade-up delay-200 font-display text-[clamp(4rem,14vw,9rem)] leading-none text-gradient-gold">
           Arolena
         </h1>
-        <p className="mt-6 text-xl md:text-2xl text-arolena-cream/90 font-light">
+
+        <p className="animate-fade-up delay-300 mt-7 text-xl md:text-2xl text-arolena-cream/90 font-light tracking-wide">
           Sabores mediterráneos con horno de leña y parrilla.
         </p>
-        <p className="mt-5 max-w-2xl mx-auto text-arolena-cream/75 leading-relaxed">
+        <p className="animate-fade-up delay-400 mt-5 max-w-2xl mx-auto text-arolena-cream/65 leading-relaxed text-base md:text-lg">
           Cocina mediterránea e italiana, pizzas de masa artesanal, carnes a la
           parrilla y un ambiente elegante para disfrutar en cualquier ocasión.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+        <div className="animate-fade-up delay-500 mt-12 flex flex-wrap items-center justify-center gap-3 md:gap-4">
           <CTAButton href="/carta" variant="primary">
             Ver carta
           </CTAButton>
@@ -49,6 +60,14 @@ export default function Hero() {
           <CTAButton href={restaurantInfo.mapsLink} external variant="ghost">
             Cómo llegar
           </CTAButton>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="animate-fade-in delay-700 mt-16 flex justify-center">
+          <span
+            aria-hidden="true"
+            className="block w-px h-12 bg-gradient-to-b from-arolena-gold/60 to-transparent"
+          />
         </div>
       </div>
     </section>

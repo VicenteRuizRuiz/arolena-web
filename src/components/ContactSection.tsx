@@ -6,6 +6,7 @@ export default function ContactSection() {
     <section id="contacto" className="bg-arolena-ink py-20 md:py-28">
       <div className="container grid lg:grid-cols-2 gap-12">
         <div>
+          <span aria-hidden="true" className="gold-rule" />
           <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
             Contacto y reservas
           </p>
