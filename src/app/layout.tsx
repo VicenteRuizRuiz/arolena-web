@@ -4,6 +4,9 @@ import { Fraunces, Outfit } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollProgress from '@/components/ScrollProgress';
+import CustomCursor from '@/components/CustomCursor';
+import ChapterIndex from '@/components/ChapterIndex';
 import { restaurantInfo } from '@/data/restaurantInfo';
 
 const display = Fraunces({
@@ -128,6 +131,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         {/* Grain texture overlay */}
         <div aria-hidden="true" className="grain-overlay" />
+        <ScrollProgress />
+        <CustomCursor />
+        <ChapterIndex />
         <Header />
         <main id="main">{children}</main>
         <Footer />

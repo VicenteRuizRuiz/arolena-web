@@ -3,11 +3,13 @@ import Hero from '@/components/Hero';
 import Marquee from '@/components/Marquee';
 import WoodOvenSection from '@/components/WoodOvenSection';
 import CuisineSection from '@/components/CuisineSection';
+import PhilosophySection from '@/components/PhilosophySection';
 import OccasionsSection from '@/components/OccasionsSection';
 import Gallery from '@/components/Gallery';
 import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import MenuSection from '@/components/MenuSection';
+import OrnamentalDivider from '@/components/OrnamentalDivider';
 
 const MARQUEE_ITEMS = [
   'Horno de leña',
@@ -25,7 +27,9 @@ export default function HomePage() {
       <Marquee items={MARQUEE_ITEMS} />
       <WoodOvenSection />
       <CuisineSection />
+      <PhilosophySection />
       <OccasionsSection />
+      <OrnamentalDivider />
       <Gallery />
       <ServicesSection />
       <MenuSection />

@@ -5,25 +5,44 @@ import { restaurantInfo } from '@/data/restaurantInfo';
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-arolena-black border-t border-arolena-line py-12">
-      <div className="container grid md:grid-cols-3 gap-8 text-arolena-cream/80 text-sm">
+    <footer className="relative bg-arolena-black border-t border-arolena-line">
+      {/* Cintillo dorado superior */}
+      <div className="h-px bg-gradient-to-r from-transparent via-arolena-gold/60 to-transparent" />
+
+      {/* Bloque de marca grande */}
+      <div className="container pt-20 pb-12 text-center border-b border-arolena-line/60">
+        <div className="flex items-center justify-center gap-3 text-arolena-cream">
+          <Logo className="h-8 w-8 text-arolena-gold" />
+        </div>
+        <p className="mt-6 font-display text-6xl md:text-8xl tracking-tight text-arolena-cream">
+          Arolena
+        </p>
+        <p className="mt-4 font-display-italic text-arolena-gold/80 text-lg">
+          Sabores mediterráneos · {restaurantInfo.ciudad}
+        </p>
+      </div>
+
+      <div className="container grid md:grid-cols-4 gap-10 py-14 text-arolena-cream/80 text-sm">
         <div>
-          <div className="flex items-center gap-3 text-arolena-cream">
-            <Logo className="h-7 w-7 text-arolena-gold" />
-            <span className="font-display text-xl tracking-wider">Arolena</span>
-          </div>
-          <p className="mt-4 leading-relaxed">
-            {restaurantInfo.nombreCompleto}. Cocina mediterránea e italiana,
-            horno de leña y parrilla en {restaurantInfo.ciudad}.
-          </p>
+          <h3 className="text-arolena-gold text-[10px] uppercase tracking-[0.3em] mb-5">
+            Visítanos
+          </h3>
+          <p className="leading-relaxed">{restaurantInfo.direccion}</p>
+          <a
+            href={restaurantInfo.mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-block text-arolena-cream hover:text-arolena-gold transition-colors"
+          >
+            Cómo llegar →
+          </a>
         </div>
 
         <div>
-          <h3 className="text-arolena-gold text-xs uppercase tracking-[0.25em] mb-4">
-            Contacto
+          <h3 className="text-arolena-gold text-[10px] uppercase tracking-[0.3em] mb-5">
+            Reservas
           </h3>
-          <p>{restaurantInfo.direccion}</p>
-          <p className="mt-2">
+          <p>
             <a href={`tel:${restaurantInfo.telefonoTel}`} className="hover:text-arolena-gold">
               {restaurantInfo.telefono}
             </a>
@@ -41,36 +60,62 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-arolena-gold text-xs uppercase tracking-[0.25em] mb-4">
+          <h3 className="text-arolena-gold text-[10px] uppercase tracking-[0.3em] mb-5">
             Horario
           </h3>
-          <p>Comidas: {restaurantInfo.horario.comidas}</p>
-          <p>Cenas: {restaurantInfo.horario.cenas}</p>
-          <p className="mt-2">{restaurantInfo.horario.cierre}</p>
-          <div className="mt-4 flex gap-4">
-            <a
-              href={restaurantInfo.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-arolena-gold"
-            >
-              Instagram
-            </a>
-            <a
-              href={restaurantInfo.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-arolena-gold"
-            >
-              TikTok
-            </a>
-          </div>
+          <p>
+            <span className="font-display-italic text-arolena-cream/60 mr-2">Comidas</span>
+            {restaurantInfo.horario.comidas}
+          </p>
+          <p className="mt-1">
+            <span className="font-display-italic text-arolena-cream/60 mr-2">Cenas</span>
+            {restaurantInfo.horario.cenas}
+          </p>
+          <p className="mt-3 text-arolena-cream/55 text-xs">
+            {restaurantInfo.horario.cierre}
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-arolena-gold text-[10px] uppercase tracking-[0.3em] mb-5">
+            Síguenos
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href={restaurantInfo.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-arolena-gold inline-flex items-center gap-2"
+              >
+                Instagram
+                <span className="text-arolena-cream/45 text-xs">
+                  {restaurantInfo.instagramHandle}
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={restaurantInfo.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-arolena-gold inline-flex items-center gap-2"
+              >
+                TikTok
+                <span className="text-arolena-cream/45 text-xs">
+                  {restaurantInfo.tiktokHandle}
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div className="container mt-10 pt-6 border-t border-arolena-line text-arolena-cream/55 text-xs flex flex-col sm:flex-row sm:justify-between gap-2">
-        <p>© {year} {restaurantInfo.nombreCompleto}. Todos los derechos reservados.</p>
-        <p>Hecho con cariño en {restaurantInfo.ciudad}.</p>
+      <div className="container py-6 border-t border-arolena-line/60 text-arolena-cream/45 text-xs flex flex-col sm:flex-row sm:justify-between gap-2">
+        <p>© {year} {restaurantInfo.nombreCompleto}.</p>
+        <p className="font-display-italic">
+          Hecho con cariño en {restaurantInfo.ciudad}.
+        </p>
       </div>
     </footer>
   );

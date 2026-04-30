@@ -19,19 +19,24 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-arolena-black/85 backdrop-blur border-b border-arolena-line">
-      <div className="container flex items-center justify-between h-16 md:h-20">
+    <header className="sticky top-0 z-50 bg-arolena-black/80 backdrop-blur-md border-b border-arolena-line/60">
+      <div className="container flex items-center justify-between h-16 md:h-[72px]">
         <Link
           href="/"
           className="flex items-center gap-3 text-arolena-cream hover:text-arolena-gold transition-colors focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-arolena-gold rounded"
           aria-label={`${restaurantInfo.nombreComercial} - Inicio`}
         >
-          <Logo className="h-8 w-8 text-arolena-gold" />
-          <span className="font-display text-2xl tracking-wider">Arolena</span>
+          <Logo className="h-7 w-7 text-arolena-gold" />
+          <span className="font-display text-xl md:text-2xl tracking-wide">
+            Arolena
+          </span>
+          <span className="hidden md:inline-block ml-2 pl-3 border-l border-arolena-line/80 text-[10px] tracking-[0.3em] uppercase text-arolena-cream/55">
+            Albolote · Granada
+          </span>
         </Link>
 
         <nav aria-label="Principal" className="hidden lg:block">
-          <ul className="flex items-center gap-8 text-sm text-arolena-cream/85">
+          <ul className="flex items-center gap-7 text-[12px] tracking-[0.2em] uppercase text-arolena-cream/75">
             {nav.map((n) => (
               <li key={n.href}>
                 <Link
@@ -51,7 +56,8 @@ export default function Header() {
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-arolena-gold text-arolena-black text-sm font-medium hover:bg-arolena-goldsoft transition-colors focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-arolena-gold"
         >
-          Reservar por WhatsApp
+          <span className="font-display-italic">Reservar</span>
+          <span aria-hidden="true">→</span>
         </a>
 
         <button
