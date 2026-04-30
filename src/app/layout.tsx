@@ -14,8 +14,7 @@ const display = Fraunces({
   weight: ['300', '400', '500', '600', '700', '900'],
   style: ['normal', 'italic'],
   variable: '--font-display',
-  display: 'swap',
-  axes: ['SOFT', 'opsz']
+  display: 'swap'
 });
 
 const sans = Outfit({

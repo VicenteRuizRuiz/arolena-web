@@ -96,14 +96,12 @@
 .font-display-italic {
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;
-  font-variation-settings: "SOFT" 100, "opsz" 144;
   letter-spacing: -0.01em;
 }
 
 .hero-title {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 400;
-  font-variation-settings: "SOFT" 30, "opsz" 144;
   letter-spacing: -0.045em;
   line-height: 0.88;
 }
