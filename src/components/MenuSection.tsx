@@ -2,6 +2,7 @@
 import menuData from '@/data/menu.json';
 import type { Menu } from '@/data/menu.types';
 import Link from 'next/link';
+import Eyebrow from './Eyebrow';
 
 const menu = menuData as Menu;
 
@@ -14,18 +15,16 @@ export default function MenuSection({ full = false }: MenuSectionProps) {
   const categorias = menu.carta;
 
   return (
-    <section id="carta" className="bg-arolena-black py-20 md:py-28">
+    <section id="carta" className="bg-arolena-black py-24 md:py-36">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <span aria-hidden="true" className="gold-rule" />
-          <p className="text-arolena-gold tracking-[0.3em] text-xs uppercase mb-4">
-              Carta
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl text-arolena-cream">
-              Nuestra carta
+            <Eyebrow number="06">Carta</Eyebrow>
+            <h2 className="font-display text-5xl md:text-6xl text-arolena-cream leading-[0.95]">
+              Nuestra{' '}
+              <span className="font-display-italic text-arolena-gold">carta</span>.
             </h2>
-            <p className="mt-4 text-arolena-cream/75 max-w-2xl">
+            <p className="mt-6 text-arolena-cream/75 max-w-xl">
               Una selección amplia para todos los gustos. Precios con IVA
               incluido.
             </p>
@@ -52,7 +51,7 @@ export default function MenuSection({ full = false }: MenuSectionProps) {
               id={`cat-${slug(cat.categoria)}`}
               className="scroll-mt-24"
             >
-              <h3 className="font-display text-2xl text-arolena-gold border-b border-arolena-line pb-3 mb-5">
+              <h3 className="font-display-italic text-3xl text-arolena-gold border-b border-arolena-line pb-3 mb-5">
                 {cat.categoria}
               </h3>
               <ul className="divide-y divide-arolena-line/60">

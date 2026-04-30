@@ -4,11 +4,11 @@ import CTAButton from './CTAButton';
 import { restaurantInfo } from '@/data/restaurantInfo';
 
 const HERO_IMAGE = '/images/restaurante/IMG_5232.jpeg';
+const HERO_DETAIL = '/images/platos/IMG_1809.jpeg';
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-arolena-black min-h-[92vh] flex items-center">
-      {/* Imagen de fondo */}
+    <section className="relative isolate overflow-hidden bg-arolena-black min-h-screen flex flex-col">
       <div className="absolute inset-0 -z-10">
         <Image
           src={HERO_IMAGE}
@@ -16,58 +16,118 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-35"
+          className="object-cover opacity-30"
         />
-        {/* Gradiente radial que da atmósfera en lugar de un plano oscuro uniforme */}
-        <div className="absolute inset-0 bg-gradient-to-b from-arolena-black/80 via-arolena-black/50 to-arolena-black" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(200,168,118,0.07),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-arolena-black/85 via-arolena-black/55 to-arolena-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(200,168,118,0.10),transparent)]" />
       </div>
 
-      {/* Línea decorativa vertical izquierda */}
-      <div
-        aria-hidden="true"
-        className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 w-px h-32 bg-gradient-to-b from-transparent via-arolena-gold/40 to-transparent hidden md:block animate-fade-in delay-700"
-      />
-
-      <div className="container py-24 md:py-36 text-center">
-        <p className="animate-fade-up delay-100 text-arolena-gold tracking-[0.5em] text-xs md:text-sm uppercase mb-8">
-          {restaurantInfo.ciudad}
-        </p>
-
-        <h1 className="animate-fade-up delay-200 font-display text-[clamp(4rem,14vw,9rem)] leading-none text-gradient-gold">
-          Arolena
-        </h1>
-
-        <p className="animate-fade-up delay-300 mt-7 text-xl md:text-2xl text-arolena-cream/90 font-light tracking-wide">
-          Sabores mediterráneos con horno de leña y parrilla.
-        </p>
-        <p className="animate-fade-up delay-400 mt-5 max-w-2xl mx-auto text-arolena-cream/65 leading-relaxed text-base md:text-lg">
-          Cocina mediterránea e italiana, pizzas de masa artesanal, carnes a la
-          parrilla y un ambiente elegante para disfrutar en cualquier ocasión.
-        </p>
-
-        <div className="animate-fade-up delay-500 mt-12 flex flex-wrap items-center justify-center gap-3 md:gap-4">
-          <CTAButton href="/carta" variant="primary">
-            Ver carta
-          </CTAButton>
-          <CTAButton
-            href={restaurantInfo.whatsappLink}
-            external
-            variant="secondary"
-          >
-            Reservar por WhatsApp
-          </CTAButton>
-          <CTAButton href={restaurantInfo.mapsLink} external variant="ghost">
-            Cómo llegar
-          </CTAButton>
+      <div className="container pt-6 md:pt-8 animate-fade-in delay-200">
+        <div className="grid grid-cols-3 text-[10px] md:text-xs tracking-[0.3em] uppercase text-arolena-cream/55">
+          <span>Albolote · Granada</span>
+          <span className="text-center hidden md:block">Est. Sabor Mediterráneo</span>
+          <span className="text-right text-arolena-gold col-span-2 md:col-span-1">
+            Nº 01 — Carta de Temporada
+          </span>
         </div>
+        <div className="mt-3 h-px bg-gradient-to-r from-transparent via-arolena-line to-transparent" />
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="animate-fade-in delay-700 mt-16 flex justify-center">
-          <span
-            aria-hidden="true"
-            className="block w-px h-12 bg-gradient-to-b from-arolena-gold/60 to-transparent"
-          />
+      <div className="container flex-1 flex items-center py-16 md:py-24">
+        <div className="w-full grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-8">
+            <p className="animate-fade-up delay-300 text-arolena-gold tracking-[0.5em] text-xs uppercase mb-6">
+              <span className="inline-block w-12 h-px bg-arolena-gold align-middle mr-3" />
+              Cocina con horno de leña
+            </p>
+
+            <h1 className="hero-title animate-fade-up delay-400 text-[clamp(4.5rem,16vw,12rem)] text-arolena-cream">
+              <span className="block">Arolena</span>
+              <span className="block font-display-italic text-arolena-gold/95 -mt-2 md:-mt-4 pl-[10vw] text-[clamp(3rem,11vw,8rem)]">
+                sabores
+              </span>
+              <span className="block text-arolena-cream/85 -mt-1 md:-mt-3">
+                mediterráneos.
+              </span>
+            </h1>
+
+            <div className="animate-fade-up delay-500 mt-10 max-w-xl">
+              <p className="text-base md:text-lg text-arolena-cream/75 leading-relaxed">
+                Pizzas de masa artesanal en horno de leña, parrilla de carnes
+                seleccionadas y recetas italianas en un ambiente elegante.
+                <span className="text-arolena-cream"> Para cualquier ocasión.</span>
+              </p>
+            </div>
+
+            <div className="animate-fade-up delay-600 mt-10 flex flex-wrap items-center gap-3 md:gap-4">
+              <CTAButton href="/carta" variant="primary">
+                Ver carta
+              </CTAButton>
+              <CTAButton
+                href={restaurantInfo.whatsappLink}
+                external
+                variant="secondary"
+              >
+                Reservar por WhatsApp
+              </CTAButton>
+              <CTAButton href={restaurantInfo.mapsLink} external variant="ghost">
+                Cómo llegar →
+              </CTAButton>
+            </div>
+          </div>
+
+          <aside className="lg:col-span-4 animate-fade-up delay-700">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-arolena-line max-w-[280px] ml-auto hidden lg:block">
+              <Image
+                src={HERO_DETAIL}
+                alt="Pizza artesanal en horno de leña"
+                fill
+                sizes="280px"
+                className="object-cover editorial-img"
+              />
+              <div className="absolute inset-0 ring-1 ring-arolena-gold/20" />
+            </div>
+
+            <dl className="mt-8 grid grid-cols-2 lg:grid-cols-1 gap-y-5 gap-x-6 text-sm">
+              <div>
+                <dt className="text-arolena-gold/70 text-[10px] tracking-[0.3em] uppercase mb-1">
+                  Comidas
+                </dt>
+                <dd className="text-arolena-cream font-display-italic text-xl">
+                  {restaurantInfo.horario.comidas}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-arolena-gold/70 text-[10px] tracking-[0.3em] uppercase mb-1">
+                  Cenas
+                </dt>
+                <dd className="text-arolena-cream font-display-italic text-xl">
+                  {restaurantInfo.horario.cenas}
+                </dd>
+              </div>
+              <div className="col-span-2 lg:col-span-1">
+                <dt className="text-arolena-gold/70 text-[10px] tracking-[0.3em] uppercase mb-1">
+                  Reservas
+                </dt>
+                <dd>
+                  <a
+                    href={`tel:${restaurantInfo.telefonoTel}`}
+                    className="text-arolena-cream hover:text-arolena-gold transition-colors text-base"
+                  >
+                    {restaurantInfo.telefono}
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+
+      <div className="container pb-6 md:pb-8 animate-fade-in delay-900">
+        <div className="h-px bg-gradient-to-r from-transparent via-arolena-line to-transparent mb-4" />
+        <div className="flex items-end justify-between text-[10px] md:text-xs tracking-[0.3em] uppercase text-arolena-cream/55">
+          <span>Scroll ↓</span>
+          <span className="text-arolena-gold">Cap. I — La casa</span>
         </div>
       </div>
     </section>
